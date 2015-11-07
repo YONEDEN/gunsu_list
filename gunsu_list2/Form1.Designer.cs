@@ -35,16 +35,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.style = new System.Windows.Forms.ListBox();
             this.book = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.genre = new System.Windows.Forms.ListBox();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.listBox5 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +87,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(542, 99);
+            this.label5.Location = new System.Drawing.Point(546, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 4;
@@ -104,18 +105,18 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(544, 144);
+            this.checkBox1.Location = new System.Drawing.Point(548, 144);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(88, 16);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "この回で完結";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // style
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Items.AddRange(new object[] {
+            this.style.FormattingEnabled = true;
+            this.style.ItemHeight = 12;
+            this.style.Items.AddRange(new object[] {
             "ゲストコラム",
             "連載",
             "短編読切",
@@ -126,63 +127,36 @@
             "表紙イラスト",
             "表紙デザイン",
             "編集"});
-            this.listBox1.Location = new System.Drawing.Point(265, 96);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(118, 64);
-            this.listBox1.TabIndex = 8;
+            this.style.Location = new System.Drawing.Point(269, 96);
+            this.style.Name = "style";
+            this.style.Size = new System.Drawing.Size(118, 64);
+            this.style.TabIndex = 8;
             // 
             // book
             // 
             this.book.FormattingEnabled = true;
             this.book.ItemHeight = 12;
-            this.book.Items.AddRange(new object[] {
-            "14年02月号",
-            "14年03月号",
-            "14年04月号",
-            "14年05月号",
-            "14年06月号",
-            "14年07月号",
-            "14年08月号",
-            "14年09月号",
-            "14年10月号",
-            "14年11月号",
-            "14年12月号",
-            "15年01月号",
-            "15年02月号",
-            "15年02月増刊",
-            "15年03月号",
-            "15年04月号",
-            "15年05月号",
-            "15年06月号",
-            "15年07月号",
-            "15年08月号",
-            "15年09月号",
-            "15年10月号",
-            "15年11月号",
-            "15年12月号",
-            "16年01月号",
-            "16年02月号"});
             this.book.Location = new System.Drawing.Point(61, 96);
             this.book.Name = "book";
             this.book.Size = new System.Drawing.Size(179, 64);
             this.book.TabIndex = 9;
             this.book.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
-            // listBox3
+            // genre
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 12;
-            this.listBox3.Items.AddRange(new object[] {
+            this.genre.FormattingEnabled = true;
+            this.genre.ItemHeight = 12;
+            this.genre.Items.AddRange(new object[] {
             "小説",
             "詩集",
             "エッセイ",
             "ハウツー",
             "イラスト",
             "コミック"});
-            this.listBox3.Location = new System.Drawing.Point(399, 96);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(127, 64);
-            this.listBox3.TabIndex = 10;
+            this.genre.Location = new System.Drawing.Point(403, 96);
+            this.genre.Name = "genre";
+            this.genre.Size = new System.Drawing.Size(127, 64);
+            this.genre.TabIndex = 10;
             // 
             // listBox4
             // 
@@ -209,14 +183,6 @@
             this.textBox1.Size = new System.Drawing.Size(59, 19);
             this.textBox1.TabIndex = 13;
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(14, 175);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(751, 397);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(667, 12);
@@ -239,26 +205,35 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(602, 96);
+            this.textBox2.Location = new System.Drawing.Point(948, 92);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(59, 19);
             this.textBox2.TabIndex = 17;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 187);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 21;
+            this.dataGridView1.Size = new System.Drawing.Size(1191, 429);
+            this.dataGridView1.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 577);
+            this.ClientSize = new System.Drawing.Size(1212, 628);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox5);
             this.Controls.Add(this.listBox4);
-            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.genre);
             this.Controls.Add(this.book);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.style);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -268,6 +243,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,16 +258,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox style;
         private System.Windows.Forms.ListBox book;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox genre;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

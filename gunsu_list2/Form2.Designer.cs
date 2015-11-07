@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.book = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.author = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.auth_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.style = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.series = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.review_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productlistBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.product_list = new gunsu_list2.Product_list();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.styleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rebiewtextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productlistBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product_list)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -51,77 +51,86 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.book,
-            this.p_number,
-            this.p_name,
-            this.author,
-            this.auth_num,
-            this.style,
-            this.genre,
-            this.series,
-            this.review_text});
-            this.dataGridView1.DataSource = this.productlistBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.bookDataGridViewTextBoxColumn,
+            this.pnumberDataGridViewTextBoxColumn,
+            this.pnameDataGridViewTextBoxColumn,
+            this.authorDataGridViewTextBoxColumn,
+            this.authnumDataGridViewTextBoxColumn,
+            this.styleDataGridViewTextBoxColumn,
+            this.genreDataGridViewTextBoxColumn,
+            this.seriesDataGridViewTextBoxColumn,
+            this.rebiewtextDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dataTable1BindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(994, 358);
+            this.dataGridView1.Size = new System.Drawing.Size(1021, 377);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // book
-            // 
-            this.book.HeaderText = "掲載号";
-            this.book.Name = "book";
-            // 
-            // p_number
-            // 
-            this.p_number.HeaderText = "作品番号";
-            this.p_number.Name = "p_number";
-            // 
-            // p_name
-            // 
-            this.p_name.HeaderText = "作品名";
-            this.p_name.Name = "p_name";
-            // 
-            // author
-            // 
-            this.author.HeaderText = "著者名";
-            this.author.Name = "author";
-            // 
-            // auth_num
-            // 
-            this.auth_num.HeaderText = "著者作品番号";
-            this.auth_num.Name = "auth_num";
-            // 
-            // style
-            // 
-            this.style.HeaderText = "部門";
-            this.style.Name = "style";
-            // 
-            // genre
-            // 
-            this.genre.HeaderText = "ジャンル";
-            this.genre.Name = "genre";
-            // 
-            // series
-            // 
-            this.series.HeaderText = "連載回数";
-            this.series.Name = "series";
-            // 
-            // review_text
-            // 
-            this.review_text.HeaderText = "レビュー";
-            this.review_text.Name = "review_text";
-            // 
-            // productlistBindingSource
-            // 
-            this.productlistBindingSource.DataSource = this.product_list;
-            this.productlistBindingSource.Position = 0;
             // 
             // product_list
             // 
             this.product_list.DataSetName = "Product_list";
             this.product_list.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.product_list;
+            // 
+            // bookDataGridViewTextBoxColumn
+            // 
+            this.bookDataGridViewTextBoxColumn.DataPropertyName = "book";
+            this.bookDataGridViewTextBoxColumn.HeaderText = "book";
+            this.bookDataGridViewTextBoxColumn.Name = "bookDataGridViewTextBoxColumn";
+            // 
+            // pnumberDataGridViewTextBoxColumn
+            // 
+            this.pnumberDataGridViewTextBoxColumn.DataPropertyName = "p_number";
+            this.pnumberDataGridViewTextBoxColumn.HeaderText = "p_number";
+            this.pnumberDataGridViewTextBoxColumn.Name = "pnumberDataGridViewTextBoxColumn";
+            // 
+            // pnameDataGridViewTextBoxColumn
+            // 
+            this.pnameDataGridViewTextBoxColumn.DataPropertyName = "p_name";
+            this.pnameDataGridViewTextBoxColumn.HeaderText = "p_name";
+            this.pnameDataGridViewTextBoxColumn.Name = "pnameDataGridViewTextBoxColumn";
+            // 
+            // authorDataGridViewTextBoxColumn
+            // 
+            this.authorDataGridViewTextBoxColumn.DataPropertyName = "author";
+            this.authorDataGridViewTextBoxColumn.HeaderText = "author";
+            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            // 
+            // authnumDataGridViewTextBoxColumn
+            // 
+            this.authnumDataGridViewTextBoxColumn.DataPropertyName = "auth_num";
+            this.authnumDataGridViewTextBoxColumn.HeaderText = "auth_num";
+            this.authnumDataGridViewTextBoxColumn.Name = "authnumDataGridViewTextBoxColumn";
+            // 
+            // styleDataGridViewTextBoxColumn
+            // 
+            this.styleDataGridViewTextBoxColumn.DataPropertyName = "style";
+            this.styleDataGridViewTextBoxColumn.HeaderText = "style";
+            this.styleDataGridViewTextBoxColumn.Name = "styleDataGridViewTextBoxColumn";
+            // 
+            // genreDataGridViewTextBoxColumn
+            // 
+            this.genreDataGridViewTextBoxColumn.DataPropertyName = "genre";
+            this.genreDataGridViewTextBoxColumn.HeaderText = "genre";
+            this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
+            // 
+            // seriesDataGridViewTextBoxColumn
+            // 
+            this.seriesDataGridViewTextBoxColumn.DataPropertyName = "series";
+            this.seriesDataGridViewTextBoxColumn.HeaderText = "series";
+            this.seriesDataGridViewTextBoxColumn.Name = "seriesDataGridViewTextBoxColumn";
+            // 
+            // rebiewtextDataGridViewTextBoxColumn
+            // 
+            this.rebiewtextDataGridViewTextBoxColumn.DataPropertyName = "rebiew_text";
+            this.rebiewtextDataGridViewTextBoxColumn.HeaderText = "rebiew_text";
+            this.rebiewtextDataGridViewTextBoxColumn.Name = "rebiewtextDataGridViewTextBoxColumn";
             // 
             // Form2
             // 
@@ -132,8 +141,8 @@
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productlistBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.product_list)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,16 +150,16 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn book;
-        private System.Windows.Forms.DataGridViewTextBoxColumn p_number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn p_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn author;
-        private System.Windows.Forms.DataGridViewTextBoxColumn auth_num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn style;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn series;
-        private System.Windows.Forms.DataGridViewTextBoxColumn review_text;
-        private System.Windows.Forms.BindingSource productlistBindingSource;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private Product_list product_list;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pnumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn authnumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn styleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn seriesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rebiewtextDataGridViewTextBoxColumn;
     }
 }
