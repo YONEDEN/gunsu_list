@@ -33,14 +33,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 18);
+            this.label1.Location = new System.Drawing.Point(12, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 0;
@@ -49,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(376, 18);
+            this.label2.Location = new System.Drawing.Point(379, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 1;
@@ -58,7 +65,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 85);
+            this.label3.Location = new System.Drawing.Point(12, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 2;
@@ -67,7 +74,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(376, 52);
+            this.label4.Location = new System.Drawing.Point(613, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 12);
             this.label4.TabIndex = 3;
@@ -76,37 +83,150 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(376, 85);
+            this.label5.Location = new System.Drawing.Point(322, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 4;
             this.label5.Text = "連載回数";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(696, 85);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 12);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "この回で完結";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 123);
+            this.label7.Location = new System.Drawing.Point(9, 160);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 12);
             this.label7.TabIndex = 6;
             this.label7.Text = "レビュー";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(381, 132);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(88, 16);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "この回で完結";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Items.AddRange(new object[] {
+            "ゲストコラム",
+            "連載",
+            "短編読切",
+            "掌編読切",
+            "コラボイラスト",
+            "イラスト",
+            "既刊紹介",
+            "表紙イラスト",
+            "表紙デザイン",
+            "編集"});
+            this.listBox1.Location = new System.Drawing.Point(65, 130);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(118, 16);
+            this.listBox1.TabIndex = 8;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 12;
+            this.listBox2.Items.AddRange(new object[] {
+            "14年02月号",
+            "14年03月号",
+            "14年04月号",
+            "14年05月号",
+            "14年06月号",
+            "14年07月号",
+            "14年08月号",
+            "14年09月号",
+            "14年10月号",
+            "14年11月号",
+            "14年12月号",
+            "15年01月号",
+            "15年02月号",
+            "15年02月増刊",
+            "15年03月号",
+            "15年04月号",
+            "15年05月号",
+            "15年06月号",
+            "15年07月号",
+            "15年08月号",
+            "15年09月号",
+            "15年10月号",
+            "15年11月号",
+            "15年12月号",
+            "16年01月号",
+            "16年02月号"});
+            this.listBox2.Location = new System.Drawing.Point(65, 96);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(118, 16);
+            this.listBox2.TabIndex = 9;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 12;
+            this.listBox3.Items.AddRange(new object[] {
+            "小説",
+            "詩集",
+            "エッセイ",
+            "ハウツー",
+            "イラスト",
+            "コミック"});
+            this.listBox3.Location = new System.Drawing.Point(189, 130);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(127, 16);
+            this.listBox3.TabIndex = 10;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 12;
+            this.listBox4.Location = new System.Drawing.Point(65, 61);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(308, 16);
+            this.listBox4.TabIndex = 11;
+            // 
+            // listBox5
+            // 
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.ItemHeight = 12;
+            this.listBox5.Location = new System.Drawing.Point(426, 61);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(181, 16);
+            this.listBox5.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(696, 58);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(59, 19);
+            this.textBox1.TabIndex = 13;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(14, 175);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(751, 397);
+            this.richTextBox1.TabIndex = 14;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 577);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBox5);
+            this.Controls.Add(this.listBox4);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -126,8 +246,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
