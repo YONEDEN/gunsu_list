@@ -15,6 +15,12 @@ namespace gunsu_list2
         public Form1()
         {
             InitializeComponent();
+
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+
+        
+        
         }
     }
 }
