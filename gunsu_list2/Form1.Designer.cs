@@ -36,7 +36,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.book = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.listBox5 = new System.Windows.Forms.ListBox();
@@ -131,11 +131,11 @@
             this.listBox1.Size = new System.Drawing.Size(118, 64);
             this.listBox1.TabIndex = 8;
             // 
-            // listBox2
+            // book
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 12;
-            this.listBox2.Items.AddRange(new object[] {
+            this.book.FormattingEnabled = true;
+            this.book.ItemHeight = 12;
+            this.book.Items.AddRange(new object[] {
             "14年02月号",
             "14年03月号",
             "14年04月号",
@@ -162,10 +162,11 @@
             "15年12月号",
             "16年01月号",
             "16年02月号"});
-            this.listBox2.Location = new System.Drawing.Point(61, 96);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(179, 64);
-            this.listBox2.TabIndex = 9;
+            this.book.Location = new System.Drawing.Point(61, 96);
+            this.book.Name = "book";
+            this.book.Size = new System.Drawing.Size(179, 64);
+            this.book.TabIndex = 9;
+            this.book.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // listBox3
             // 
@@ -224,6 +225,7 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "新規作品";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -255,7 +257,7 @@
             this.Controls.Add(this.listBox5);
             this.Controls.Add(this.listBox4);
             this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.book);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label7);
@@ -281,7 +283,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox book;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.ListBox listBox5;
