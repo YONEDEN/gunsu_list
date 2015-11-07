@@ -18,7 +18,7 @@ namespace gunsu_list2
 
             //DataTableを作成する
             DataSet ds = new DataSet();
-            DataTable dt = new DataTable("Table1");
+            DataTable dt = new DataTable("table");
             //文字列型のWeek列を追加する
             dt.Columns.Add("no.", typeof(int));
             dt.Columns.Add("掲載号", typeof(string));
@@ -85,17 +85,14 @@ namespace gunsu_list2
 
         public void button1_Click(object sender, EventArgs e) //新規作品ボタン押し下げ
         {
-            DataSet dataset = new DataSet();
-            DataTable dt = new DataTable();
-          
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable("table");
             string book2 = book.Text +" " + style.Text +" "+ genre.Text;
-            
-          //  string style2 = style.Text;
-            MessageBox.Show(book2,"選択");
-            DataRow dtrow = dt.NewRow();
-         //   dtrow["掲載号"] = book2;
-            dt.Rows.Add(dtrow);
-            dataset.Tables["Table1"].Rows[1]["掲載号"] = book2;
+         //   MessageBox.Show(book2,"選択");
+            DataRow newrow = ds.Tables["table"].NewRow();
+            newrow["掲載号"] = book;
+            newrow["部門"] = style;
+            ds.Tables["table"].Rows.Add(newrow);
         }
         
     }
