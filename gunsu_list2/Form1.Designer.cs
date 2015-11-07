@@ -218,21 +218,22 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(694, 12);
+            this.button1.Location = new System.Drawing.Point(667, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 26);
+            this.button1.Size = new System.Drawing.Size(84, 26);
             this.button1.TabIndex = 15;
-            this.button1.Text = "書き込み";
+            this.button1.Text = "新規作品";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(602, 12);
+            this.button2.Location = new System.Drawing.Point(575, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 26);
             this.button2.TabIndex = 16;
             this.button2.Text = "リスト表示";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 
